@@ -16,8 +16,10 @@ re-implemented: fresh rasterizer, fresh RNG, fresh font, fresh encoder.
 ## The image
 
 A rocket smashes out of a glowing portal ring straight at the viewer —
-nose up, flame and sparks streaming behind it, speed lines radiating
-outward, stars scattered across a deep violet night sky. Underneath, in
+red nose punching clear out of the ring's upper-right edge, gold flame and
+sparks streaming back through the ring's lower-left edge, speed lines
+radiating outward, stars scattered across a deep violet night sky. Cracks
+spider out from the ring where the nose broke through. Underneath, in
 big block letters addressed to the judge: **FEEL THAT?**
 
 Why it should excite the judge:
@@ -43,7 +45,7 @@ Python 3.13 (standard library only):
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
-This writes `out/entry.png` (1024×1024 PNG, 46,995 bytes). Without
+This writes `out/entry.png` (1024×1024 PNG, 47,823 bytes). Without
 `MAKEFUN_OUTPUT_DIR` it writes to `/output/entry.png`.
 
 Running it twice writes byte-identical files (verified with `cmp`, and
