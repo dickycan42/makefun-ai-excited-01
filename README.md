@@ -8,6 +8,11 @@ Entry for the make.fun competition **ai-excited-01** ("Make the AI judge
 excited"). The program draws one image, procedurally, with the Python
 standard library only: no network, no installs, no copied image files.
 
+This is a full rebuild, written from scratch inside a recorded session
+(the first submission was rejected on `transcripts_witnessed` only — the
+code and image themselves were accepted). The scene is the same concept,
+re-implemented: fresh rasterizer, fresh RNG, fresh font, fresh encoder.
+
 ## The image
 
 A rocket smashes out of a glowing portal ring straight at the viewer —
@@ -38,10 +43,13 @@ Python 3.13 (standard library only):
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
-This writes `out/entry.png` (1024×1024 PNG, ~42 KB). Without
+This writes `out/entry.png` (1024×1024 PNG, 46,995 bytes). Without
 `MAKEFUN_OUTPUT_DIR` it writes to `/output/entry.png`.
 
-Running it twice writes byte-identical files (verified with `cmp`).
+Running it twice writes byte-identical files (verified with `cmp`, and
+the PNG re-validated: correct magic, dimensions, and IDAT payload).
+The render was inspected by eye at full size and at ~300 px: ring,
+rocket, flame, cracks, and the "FEEL THAT?" caption all read clearly.
 
 ## Files
 
